@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   });
 
   double subTextSize = 40;
-  double headerTextSize = 70;
+  double headerTextSize = 120;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,17 @@ class Header extends StatelessWidget {
             'LEE MIN HYEONG',
             color: Colors.white,
             size: subTextSize,
+            letterSpacing: 12,
+            isTitle: true,
           ),
           const SizedBox(height: 10),
           TextCustom(
-            'P{ }ROTPOLIO',
+            'P{}ROTPOLIO',
             color: Colors.white,
             size: headerTextSize,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 8,
+            isTitle: true,
           ),
           const SizedBox(height: 70),
           Row(
@@ -40,7 +45,7 @@ class Header extends StatelessWidget {
               TextCustom(
                 '{',
                 color: Colors.white,
-                size: headerTextSize,
+                size: 70,
                 fontWeight: FontWeight.bold,
               ),
               const SizedBox(width: 40),
@@ -53,7 +58,7 @@ class Header extends StatelessWidget {
               TextCustom(
                 '}',
                 color: Colors.white,
-                size: headerTextSize,
+                size: 70,
                 fontWeight: FontWeight.bold,
               ),
             ],

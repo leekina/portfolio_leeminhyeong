@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-//dfdfdf
+String kMainFont = 'AppleSDGothicNeo';
+String kTitleFont = 'Frank_Ruhl_Libre';
 double contextWidth = Get.width;
 double contextHeight = Get.height;
 double kFHDHeight = 1080;

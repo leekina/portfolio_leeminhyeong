@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../common.dart';
+
 enum TextType { mainTitle, subTitle, text }
 
 class TextCustom extends StatelessWidget {
@@ -9,6 +11,8 @@ class TextCustom extends StatelessWidget {
   final TextAlign? align;
   final FontWeight? fontWeight;
   final bool? isOverflow;
+  final double? letterSpacing;
+  final bool? isTitle;
 
   const TextCustom(
     this.text, {
@@ -18,6 +22,8 @@ class TextCustom extends StatelessWidget {
     this.align,
     this.fontWeight,
     this.isOverflow,
+    this.letterSpacing,
+    this.isTitle,
   }) : super(key: key);
 
   @override
@@ -27,10 +33,11 @@ class TextCustom extends StatelessWidget {
       textAlign: align,
       overflow: isOverflow == true ? TextOverflow.ellipsis : null,
       style: TextStyle(
-        // fontFamily: mainfont,
+        fontFamily: isTitle == true ? kTitleFont : kMainFont,
         color: color,
         fontWeight: fontWeight,
         fontSize: size,
+        letterSpacing: letterSpacing,
       ),
     );
   }
@@ -41,7 +48,7 @@ class TextCustom extends StatelessWidget {
       return Text(
         text,
         style: TextStyle(
-          // fontFamily: mainfont,
+          fontFamily: kMainFont,
           fontSize: 40,
           fontWeight: FontWeight.bold,
         ),
@@ -52,7 +59,7 @@ class TextCustom extends StatelessWidget {
       return Text(
         text,
         style: TextStyle(
-          // fontFamily: mainfont,
+          fontFamily: kMainFont,
           fontSize: 30,
           fontWeight: FontWeight.bold,
         ),
@@ -62,7 +69,7 @@ class TextCustom extends StatelessWidget {
     return Text(
       text,
       style: TextStyle(
-        // fontFamily: mainfont,
+        fontFamily: kMainFont,
         fontSize: 24,
         fontWeight: FontWeight.bold,
       ),
