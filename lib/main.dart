@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio_leeminhyeong/common.dart';
 
 import 'home.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(
         useMaterial3: true,
+        fontFamily: kMainFont,
       ),
       home: const Home(),
     );
