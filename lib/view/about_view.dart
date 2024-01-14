@@ -25,33 +25,25 @@ class AboutView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'images/about_image.png',
-                width: contextWidth(context) * 0.2,
-              ),
-              Image.asset(
                 'assets/images/about_image.png',
                 width: contextWidth(context) * 0.2,
               ),
-              Image.asset(
-                'about_image.png',
-                width: contextWidth(context) * 0.2,
-              ),
               SizedBox(width: 100),
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.start,
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: List.generate(
-              //     about_info.length,
-              //     (index) {
-              //       return Column(
-              //         children: [
-              //           InfoDetail(index),
-              //           SizedBox(height: 40),
-              //         ],
-              //       );
-              //     },
-              //   ),
-              // ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: List.generate(
+                  about_info.length,
+                  (index) {
+                    return Column(
+                      children: [
+                        InfoDetail(index),
+                        SizedBox(height: 40),
+                      ],
+                    );
+                  },
+                ),
+              ),
             ],
           )
         ],
