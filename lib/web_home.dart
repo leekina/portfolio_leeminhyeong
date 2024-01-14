@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
 
-import 'view/about_view.dart';
-import 'view/header.dart';
+import 'view/web/about_view.dart';
+import 'view/web/header.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class WebHome extends StatelessWidget {
+  const WebHome({super.key});
 
   @override
   Widget build(BuildContext context) {

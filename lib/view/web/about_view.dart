@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
 
-import '../info/info.dart';
+import '../../info/info.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({
@@ -21,12 +21,15 @@ class AboutView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           TextCustom.type('About', type: TextType.mainTitle),
+          SizedBox(height: 100),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/about_image.png',
-                width: contextWidth(context) * 0.2,
+                width: contextWidth(context) * 0.4 < 800
+                    ? contextWidth(context) * 0.4
+                    : 800,
               ),
               SizedBox(width: 100),
               Column(

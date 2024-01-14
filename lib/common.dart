@@ -7,6 +7,7 @@ String kTitleFont = 'Frank_Ruhl_Libre';
 // double contextHeight = Get.height;
 double kFHDHeight = 1080;
 double kFHDWidth = 1920;
+double kMobileWidth = 1024;
 Color kMainColor = const Color(0xff033423);
 
 double contextWidth(BuildContext context) {

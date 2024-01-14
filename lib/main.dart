@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
+import 'package:portfolio_leeminhyeong/mobile_home.dart';
 
-import 'home.dart';
+import 'web_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: kMainFont,
       ),
-      home: const Home(),
+      home: contextWidth(context) > kMobileWidth
+          ? const WebHome()
+          : const MobileHome(),
     );
   }
 }
