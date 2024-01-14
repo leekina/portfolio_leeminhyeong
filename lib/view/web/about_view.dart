@@ -26,7 +26,7 @@ class AboutView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/about_image.png',
+                aboutImage,
                 width: contextWidth(context) * 0.4 < 800
                     ? contextWidth(context) * 0.4
                     : 800,

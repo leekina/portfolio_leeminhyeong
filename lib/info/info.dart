@@ -28,3 +28,17 @@ List<List<String>> about_info = [
     '- 동아대학교 졸업작품 전시전 우승',
   ],
 ];
+
+String aboutImage = 'assets/images/about_image.png';
+
+List<String> skillList = [
+  'images/skill/dart_image.png',
+  'images/skill/flutter_image.png',
+  'images/skill/aws_image.png',
+  'images/skill/restapi_image.png',
+  'images/skill/sequelize_image.png',
+  'images/skill/mysql_image.png',
+  'images/skill/git_image.png',
+  'images/skill/slack_image.png',
+  'images/skill/notion_image.png',
+];

@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
-import 'package:portfolio_leeminhyeong/components/custom_text.dart';
 
 import 'view/web/about_view.dart';
 import 'view/web/header.dart';
+import 'view/web/skill_view.dart';
 
 class WebHome extends StatelessWidget {
   const WebHome({super.key});
@@ -19,6 +19,15 @@ class WebHome extends StatelessWidget {
           children: [
             Header(),
             AboutView(),
+            SkillView(),
+            Container(
+              width: contextWidth(context),
+              height: 1,
+              color: kMainColor,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 120),
+            )
           ],
         ),
       ),
