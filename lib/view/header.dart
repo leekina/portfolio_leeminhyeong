@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
     return Container(
       height: kFHDHeight * 0.7,
       constraints: BoxConstraints.tight(
-        Size(contextWidth, kFHDHeight * 0.7),
+        Size(contextWidth(context), kFHDHeight * 0.7),
       ),
       decoration: BoxDecoration(color: kMainColor),
       child: Column(
