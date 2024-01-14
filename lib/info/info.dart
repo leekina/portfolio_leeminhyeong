@@ -32,13 +32,13 @@ List<List<String>> about_info = [
 String aboutImage = 'assets/images/about_image.png';
 
 List<String> skillList = [
-  'images/skill/dart_image.png',
-  'images/skill/flutter_image.png',
-  'images/skill/aws_image.png',
-  'images/skill/restapi_image.png',
-  'images/skill/sequelize_image.png',
-  'images/skill/mysql_image.png',
-  'images/skill/git_image.png',
-  'images/skill/slack_image.png',
-  'images/skill/notion_image.png',
+  'assets/images/skill/dart_image.png',
+  'assets/images/skill/flutter_image.png',
+  'assets/images/skill/aws_image.png',
+  'assets/images/skill/restapi_image.png',
+  'assets/images/skill/sequelize_image.png',
+  'assets/images/skill/mysql_image.png',
+  'assets/images/skill/git_image.png',
+  'assets/images/skill/slack_image.png',
+  'assets/images/skill/notion_image.png',
 ];
