@@ -42,37 +42,37 @@ class TextCustom extends StatelessWidget {
     );
   }
 
-  Widget type(String text, {required TextType type}) {
+  static Widget type(String text, {required TextType type}) {
     //메인타이틀
     if (type == TextType.mainTitle) {
       return Text(
         text,
         style: TextStyle(
-          fontFamily: kMainFont,
-          fontSize: 40,
+          fontFamily: kTitleFont,
+          fontSize: 50,
           fontWeight: FontWeight.bold,
         ),
       );
     }
     //서브타이틀
-    if (type == TextType.subTitle) {
+    else if (type == TextType.subTitle) {
       return Text(
         text,
         style: TextStyle(
-          fontFamily: kMainFont,
+          fontFamily: kTitleFont,
           fontSize: 30,
           fontWeight: FontWeight.bold,
         ),
       );
+    } else {
+      return Text(
+        text,
+        style: TextStyle(
+          fontFamily: kMainFont,
+          fontSize: 24,
+        ),
+      );
     }
     //본문
-    return Text(
-      text,
-      style: TextStyle(
-        fontFamily: kMainFont,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
-    );
   }
 }
