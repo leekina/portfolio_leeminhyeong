@@ -1,10 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:portfolio_leeminhyeong/common.dart';
+import 'package:portfolio_leeminhyeong/components/custom_divider.dart';
 
 import 'view/web/about_view.dart';
 import 'view/web/header.dart';
+import 'view/web/project_view.dart';
 import 'view/web/skill_view.dart';
 
 class WebHome extends StatelessWidget {
@@ -15,19 +16,14 @@ class WebHome extends StatelessWidget {
     log('view width ${MediaQuery.of(context).size.width}');
     return Scaffold(
       body: SingleChildScrollView(
+        controller: ScrollController(),
         child: Column(
           children: [
             Header(),
             AboutView(),
             SkillView(),
-            Container(
-              width: contextWidth(context),
-              height: 1,
-              color: kMainColor,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 120),
-            )
+            DividerCustom(),
+            ProjectView(),
           ],
         ),
       ),
