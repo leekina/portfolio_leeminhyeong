@@ -64,18 +64,12 @@ flutter:
   assets:
     - assets/images/
     - assets/images/skill/
-    # - assets/images/about_image.png
-    # - assets/images/skill/dart_image.png
-    # - assets/images/skill/flutter_image.png
-    # - assets/images/skill/aws_image.png
-    # - assets/images/skill/restapi_image.png
-    # - assets/images/skill/sequelize_image.png
-    # - assets/images/skill/mysql_image.png
-    # - assets/images/skill/git_image.png
-    # - assets/images/skill/slack_image.png
-    # - assets/images/skill/notion_image.png
-    
-  #   - images/a_dot_ham.jpeg
+    - assets/images/project/
+    - assets/images/project/semobi/
+    - assets/images/project/wecanapp/
+    - assets/images/project/wecancrm/
+    - assets/images/project/wecanedu/
+    - assets/images/project/salpick/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
