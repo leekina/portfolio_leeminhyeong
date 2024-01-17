@@ -21,18 +21,16 @@ class SkillView extends StatelessWidget {
           SizedBox(height: 100),
           SizedBox(
             width: 1000,
-            child: Center(
-              child: GridView.count(
-                shrinkWrap: true,
-                childAspectRatio: 2 / 1,
-                crossAxisCount: 3,
-                mainAxisSpacing: 50,
-                crossAxisSpacing: 50,
-                children: List.generate(
-                  skillList.length,
-                  (index) => SkillCard(
-                    imageLink: skillList.elementAt(index),
-                  ),
+            child: GridView.count(
+              shrinkWrap: true,
+              childAspectRatio: 2 / 1,
+              crossAxisCount: 3,
+              mainAxisSpacing: 50,
+              crossAxisSpacing: 50,
+              children: List.generate(
+                skillList.length,
+                (index) => SkillCard(
+                  imageLink: skillList.elementAt(index),
                 ),
               ),
             ),
