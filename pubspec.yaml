@@ -64,12 +64,12 @@ flutter:
   assets:
     - assets/images/
     - assets/images/skill/
-    - assets/images/project/
-    - assets/images/project/semobi/
-    - assets/images/project/wecanapp/
-    - assets/images/project/wecancrm/
-    - assets/images/project/wecanedu/
-    - assets/images/project/salpick/
+    - assets/images/projects/
+    - assets/images/projects/semobi/
+    - assets/images/projects/wecanapp/
+    - assets/images/projects/wecancrm/
+    - assets/images/projects/wecanedu/
+    - assets/images/projects/salpick/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

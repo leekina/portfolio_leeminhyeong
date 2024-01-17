@@ -28,9 +28,9 @@ class SkillView extends StatelessWidget {
               mainAxisSpacing: 50,
               crossAxisSpacing: 50,
               children: List.generate(
-                skillList.length,
+                skillImageList.length,
                 (index) => SkillCard(
-                  imageLink: skillList.elementAt(index),
+                  imageLink: skillImageList.elementAt(index),
                 ),
               ),
             ),
