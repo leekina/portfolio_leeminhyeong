@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/mobile_home.dart';
@@ -15,6 +18,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    _initImages();
     return GetMaterialApp(
       theme: ThemeData(
         useMaterial3: true,
@@ -24,5 +28,14 @@ class MyApp extends StatelessWidget {
           ? const WebHome()
           : const MobileHome(),
     );
+  }
+
+  Future _initImages() async {
+    // >> To get paths you need these 2 lines
+    final manifestContent = await rootBundle.loadString('AssetManifest.json');
+
+    final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+    // >> To get paths you need these 2 lines
+    // print(manifestContent);
   }
 }

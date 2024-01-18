@@ -19,10 +19,10 @@ class WebHome extends StatelessWidget {
         controller: ScrollController(),
         child: Column(
           children: [
-            Header(),
-            AboutView(),
-            SkillView(),
-            DividerCustom(),
+            // Header(),
+            // AboutView(),
+            // SkillView(),
+            // DividerCustom(),
             ProjectView(),
           ],
         ),
