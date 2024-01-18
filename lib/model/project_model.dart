@@ -3,7 +3,7 @@
 class ProjectModel {
   String projcetName;
   String projectInfo;
-  String projectDate;
+  String? projectDate;
   String projectPart;
   List<String> imageList;
   List<String> about;
@@ -11,7 +11,7 @@ class ProjectModel {
   ProjectModel({
     required this.projcetName,
     required this.projectInfo,
-    required this.projectDate,
+    this.projectDate,
     required this.projectPart,
     required this.imageList,
     required this.about,
