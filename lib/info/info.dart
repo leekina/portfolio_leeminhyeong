@@ -47,7 +47,7 @@ List<String> skillImageList = [
   'assets/images/skill/notion_image.png',
 ];
 
-//프로젝트 명
+//프로젝트 리스트
 List<ProjectModel> projectList = [
   semobi,
   wecanapp,
