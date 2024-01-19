@@ -14,8 +14,8 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 540,
-      width: 540,
+      height: 500,
+      width: 500,
       alignment: Alignment.center,
       padding: EdgeInsets.all(30),
       decoration: BoxDecoration(
@@ -27,22 +27,47 @@ class ProjectCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(
-            projectList.elementAt(index).imageList.elementAt(0),
-            width: 480,
-            height: 400,
-            fit: BoxFit.cover,
+          Expanded(
+            child: Container(
+              child: Image.asset(
+                projectList.elementAt(index).imageList.elementAt(0),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Align(
             alignment: Alignment.centerLeft,
-            child: TextCustom.type(projectList.elementAt(index).projcetName,
-                type: TextType.subTitle),
+            child: TextCustom(
+              projectList.elementAt(index).projcetName,
+              size: 24,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: TextCustom('view more', size: 16),
-          )
+          viewMore()
         ],
+      ),
+    );
+  }
+
+  Align viewMore() {
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: kMainColor,
+              width: 1,
+            ),
+          ),
+        ),
+        child: TextCustom(
+          'view more',
+          size: 16,
+          isTitle: true,
+          fontWeight: FontWeight.w500,
+          color: kMainColor,
+        ),
       ),
     );
   }
