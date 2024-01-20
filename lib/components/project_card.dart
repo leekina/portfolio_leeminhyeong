@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
+import 'package:portfolio_leeminhyeong/components/project_dialog.dart';
 import 'package:portfolio_leeminhyeong/info/info.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -13,38 +14,46 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 500,
-      width: 500,
-      alignment: Alignment.center,
-      padding: EdgeInsets.all(30),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: kMainColor, width: 1),
-        color: Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            child: Container(
+    return GestureDetector(
+      onTap: () {
+        print(index);
+        showDialog(
+          context: context,
+          builder: (context) => ProjectDialog(),
+        );
+      },
+      child: Container(
+        height: 500,
+        width: 500,
+        alignment: Alignment.center,
+        padding: EdgeInsets.all(30),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: kMainColor, width: 1),
+          color: Colors.white,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
               child: Image.asset(
                 projectList.elementAt(index).imageList.elementAt(0),
+                width: 400,
                 fit: BoxFit.cover,
               ),
             ),
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: TextCustom(
-              projectList.elementAt(index).projcetName,
-              size: 24,
-              fontWeight: FontWeight.bold,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextCustom(
+                projectList.elementAt(index).projcetName,
+                size: 30,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          viewMore()
-        ],
+            viewMore()
+          ],
+        ),
       ),
     );
   }
