@@ -77,7 +77,7 @@ ProjectModel semobi = ProjectModel(
 );
 
 ProjectModel wecanapp = ProjectModel(
-  projcetName: '위캔레디 회원용 애플리케이션 리뉴얼',
+  projcetName: '위캔레디 회원용 어플 리뉴얼',
   projectInfo: '필라테스 예약/관리, ai코칭, 건강상태 기록 서비스를 제공해주는 애플리케이션',
   projectPart: 'APP 2명(디자인 1명) / 개발기여도 90%',
   imageList: [
@@ -129,8 +129,8 @@ ProjectModel wecancrm = ProjectModel(
 );
 
 ProjectModel salpick = ProjectModel(
-  projcetName: '셀러드 쇼핑몰',
-  projectInfo: '웹페이지를 웹뷰로 IOS이식',
+  projcetName: '셀픽',
+  projectInfo: '셀러트 쇼핑옴ㄹ 웹페이지를 웹뷰로 IOS이식',
   projectPart: 'APP 1명 / 개발기여도 100%',
   imageList: [
     'assets/images/projects/salpick/home.png',
