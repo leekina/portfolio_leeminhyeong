@@ -64,6 +64,8 @@ ProjectModel semobi = ProjectModel(
     'assets/images/projects/semobi/category.png',
     'assets/images/projects/semobi/chart.png',
     'assets/images/projects/semobi/table.png',
+    'assets/images/projects/semobi/cart.png',
+    'assets/images/projects/semobi/modal.png',
   ],
   about: [
     '관리자파트(WEB) 전담 및 유저, 파트너사의 WEB 일부 개발',
