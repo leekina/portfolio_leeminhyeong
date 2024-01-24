@@ -19,7 +19,7 @@ class ProjectCard extends StatelessWidget {
         print(index);
         showDialog(
           context: context,
-          builder: (context) => ProjectDialog(),
+          builder: (context) => ProjectDialog(selectedProject: index),
         );
       },
       child: Container(
