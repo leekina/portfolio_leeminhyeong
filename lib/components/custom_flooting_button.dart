@@ -20,9 +20,9 @@ class CustomFlootingButton extends StatelessWidget {
       ),
       padding: EdgeInsets.all(15),
       onPressed: () {
-        // launchUrl(
-        //   Uri.parse('https://github.com/leekina/portfolio_leeminhyeong'),
-        // );
+        launchUrl(
+          Uri.parse('https://github.com/leekina/portfolio_leeminhyeong'),
+        );
         print('view Code');
       },
       child: Row(
