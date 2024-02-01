@@ -41,8 +41,7 @@ dependencies:
   flutter_svg: ^2.0.9
   # 이미지 슬라이더
   carousel_slider: ^4.2.1
-  # url로 이동
-  url_launcher: ^6.2.4
+  
   
 
 dev_dependencies:
