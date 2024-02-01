@@ -51,27 +51,29 @@ class _ProjectDialogState extends State<ProjectDialog> {
               flex: 3,
               child: Container(
                 padding: EdgeInsets.all(kDefaultPadding),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextCustom.type('Title.', type: TextType.subTitle),
-                    TextCustom.type(project.projcetName, type: TextType.text),
-                    TextCustom.type('Overview.', type: TextType.subTitle),
-                    TextCustom.type('- ${project.projectInfo}',
-                        type: TextType.text),
-                    TextCustom.type('- ${project.projectPart}',
-                        type: TextType.text),
-                    TextCustom.type('About.', type: TextType.subTitle),
-                    ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: project.about.length,
-                        itemBuilder: (context, index) {
-                          return TextCustom.type(
-                              '- ${project.about.elementAt(index)}',
-                              type: TextType.text);
-                        })
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextCustom.type('Title.', type: TextType.subTitle),
+                      TextCustom.type(project.projcetName, type: TextType.text),
+                      TextCustom.type('Overview.', type: TextType.subTitle),
+                      TextCustom.type('- ${project.projectInfo}',
+                          type: TextType.text),
+                      TextCustom.type('- ${project.projectPart}',
+                          type: TextType.text),
+                      TextCustom.type('About.', type: TextType.subTitle),
+                      ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: project.about.length,
+                          itemBuilder: (context, index) {
+                            return TextCustom.type(
+                                '- ${project.about.elementAt(index)}',
+                                type: TextType.text);
+                          })
+                    ],
+                  ),
                 ),
               ),
             )
