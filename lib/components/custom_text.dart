@@ -69,7 +69,7 @@ class TextCustom extends StatelessWidget {
         text,
         style: TextStyle(
           fontFamily: kMainFont,
-          fontSize: 24,
+          fontSize: 20,
         ),
       );
     }

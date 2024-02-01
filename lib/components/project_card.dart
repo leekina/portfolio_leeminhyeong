@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
-import 'package:portfolio_leeminhyeong/components/project_dialog.dart';
+import 'package:portfolio_leeminhyeong/view/web/project_dialog.dart';
 import 'package:portfolio_leeminhyeong/info/info.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -47,7 +47,7 @@ class ProjectCard extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: TextCustom(
                 projectList.elementAt(index).projcetName,
-                size: 30,
+                size: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),

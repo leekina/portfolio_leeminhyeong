@@ -58,7 +58,7 @@ List<ProjectModel> projectList = [
 ProjectModel semobi = ProjectModel(
   projcetName: '세모비',
   projectInfo: '의사와 제약회사를 직접 연결시켜 약사를 거치지 않고 약품을 구할 수 있는 플랫폼 개발',
-  projectPart: '• WEB, APP 총 개발자 3명 개발기여도 30%',
+  projectPart: 'WEB, APP 총 개발자 3명 개발기여도 30%',
   imageList: [
     'assets/images/projects/semobi/home.png',
     'assets/images/projects/semobi/category.png',
