@@ -43,6 +43,7 @@ dependencies:
   carousel_slider: ^4.2.1
   # url로 이동
   url_launcher: ^6.2.4
+  
 
 dev_dependencies:
   flutter_test:

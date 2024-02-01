@@ -23,6 +23,7 @@ class CustomFlootingButton extends StatelessWidget {
       padding: EdgeInsets.all(15),
       onPressed: () async {
         print('view Code');
+
         if (await canLaunchUrl(url)) {
           launchUrl(url);
         }
