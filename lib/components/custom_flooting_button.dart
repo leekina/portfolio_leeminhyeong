@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_leeminhyeong/common.dart';
+
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
-import 'dart:js' as js;
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomFlootingButton extends StatelessWidget {
   const CustomFlootingButton({
@@ -19,10 +21,14 @@ class CustomFlootingButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(110),
       ),
       padding: EdgeInsets.all(15),
-      onPressed: () {
+      onPressed: () async {
         print('view Code');
-        js.context.callMethod(
-            "open", ["https://github.com/leekina/portfolio_leeminhyeong"]);
+        if (await canLaunchUrl(url)) {
+          launchUrl(url);
+        }
+        //dart:js로 열기
+        // js.context.callMethod(
+        //     "open", ["https://github.com/leekina/portfolio_leeminhyeong"]);
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,

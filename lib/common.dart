@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+Uri url = Uri.parse("https://github.com/leekina/portfolio_leeminhyeong");
 String kMainFont = 'AppleSDGothicNeo';
 String kTitleFont = 'Frank_Ruhl_Libre';
 // double contextWidth = Get.width;
