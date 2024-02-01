@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _initImages();
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: kMainFont,
