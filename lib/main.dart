@@ -19,11 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _initImages();
-    return GetMaterialApp(
+    return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: kMainFont,
       ),
+      title: 'Flutter developer 이민형',
       home: contextWidth(context) > kMobileWidth
           ? const WebHome()
           : const MobileHome(),
