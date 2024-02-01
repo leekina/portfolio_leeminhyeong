@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/components/custom_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomFlootingButton extends StatelessWidget {
   const CustomFlootingButton({
@@ -19,6 +20,9 @@ class CustomFlootingButton extends StatelessWidget {
       ),
       padding: EdgeInsets.all(15),
       onPressed: () {
+        launchUrl(
+          Uri.parse('https://github.com/leekina/portfolio_leeminhyeong'),
+        );
         print('view Code');
       },
       child: Row(
