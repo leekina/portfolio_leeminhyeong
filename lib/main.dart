@@ -1,12 +1,9 @@
-import 'dart:convert';
-import 'dart:js';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:portfolio_leeminhyeong/common.dart';
-import 'package:portfolio_leeminhyeong/mobile_home.dart';
 
-import 'web_home.dart';
+import 'package:portfolio_leeminhyeong/common.dart';
+import 'package:portfolio_leeminhyeong/page/mobile/mobile_home.dart';
+
+import 'page/web/web_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +15,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    _initImages();
-    return GetMaterialApp(
+    // _initImages();
+    return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
         fontFamily: kMainFont,
@@ -31,12 +28,12 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Future _initImages() async {
-    // >> To get paths you need these 2 lines
-    final manifestContent = await rootBundle.loadString('AssetManifest.json');
+  // Future _initImages() async {
+  //   // >> To get paths you need these 2 lines
+  //   final manifestContent = await rootBundle.loadString('AssetManifest.json');
 
-    final Map<String, dynamic> manifestMap = json.decode(manifestContent);
-    // >> To get paths you need these 2 lines
-    // print(manifestContent);
-  }
+  //   final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+  //   // >> To get paths you need these 2 lines
+  //   // print(manifestContent);
+  // }
 }
