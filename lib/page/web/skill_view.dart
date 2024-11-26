@@ -4,8 +4,6 @@ import 'package:portfolio_leeminhyeong/repository/user.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
 import 'package:portfolio_leeminhyeong/widget/skill_card.dart';
 
-import '../../repository/project.dart';
-
 class SkillView extends StatelessWidget {
   const SkillView({
     super.key,
