@@ -1,14 +1,14 @@
 import 'package:portfolio_leeminhyeong/model/project.model.dart';
 
 //프로젝트 리스트
-List<ProjectModel> projectList = [
+List<Project> projectList = [
   semobi,
   wecanapp,
   wecancrm,
   salpick,
 ];
 
-ProjectModel semobi = ProjectModel(
+Project semobi = const Project(
   projcetName: '세모비',
   projectInfo: '의사와 제약회사를 직접 연결시켜 약사를 거치지 않고 약품을 구할 수 있는 플랫폼 개발',
   projectPart: 'WEB, APP 총 개발자 3명 개발기여도 30%',
@@ -31,7 +31,7 @@ ProjectModel semobi = ProjectModel(
   ],
 );
 
-ProjectModel wecanapp = ProjectModel(
+Project wecanapp = const Project(
   projcetName: '위캔레디 회원용 어플 리뉴얼',
   projectInfo: '필라테스 예약/관리, ai코칭, 건강상태 기록 서비스를 제공해주는 애플리케이션',
   projectPart: 'APP 2명(디자인 1명) / 개발기여도 90%',
@@ -56,7 +56,7 @@ ProjectModel wecanapp = ProjectModel(
   ],
 );
 
-ProjectModel wecancrm = ProjectModel(
+Project wecancrm = const Project(
   projcetName: '위캔레디 센터용 CRM 리뉴얼',
   projectInfo: '필라테스 센터에서 사용하는 CRM 관리자 프로그램',
   projectPart: 'WEB 1명 개발기여도 50%',
@@ -83,7 +83,7 @@ ProjectModel wecancrm = ProjectModel(
   ],
 );
 
-ProjectModel salpick = ProjectModel(
+Project salpick = const Project(
   projcetName: '셀픽',
   projectInfo: '셀러트 쇼핑옴ㄹ 웹페이지를 웹뷰로 IOS이식',
   projectPart: 'APP 1명 / 개발기여도 100%',

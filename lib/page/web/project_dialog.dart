@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
@@ -8,12 +7,12 @@ import 'package:portfolio_leeminhyeong/model/project.model.dart';
 import '../../widget/dialog_image.dart';
 
 class ProjectDialog extends StatefulWidget {
-  ProjectDialog({
+  const ProjectDialog({
     super.key,
     required this.selectedProject,
   });
 
-  int selectedProject;
+  final int selectedProject;
 
   @override
   State<ProjectDialog> createState() => _ProjectDialogState();
@@ -22,7 +21,7 @@ class ProjectDialog extends StatefulWidget {
 class _ProjectDialogState extends State<ProjectDialog> {
   @override
   Widget build(BuildContext context) {
-    ProjectModel project = projectList.elementAt(widget.selectedProject);
+    Project project = projectList.elementAt(widget.selectedProject);
     return Dialog(
       surfaceTintColor: Colors.white,
       shape: RoundedRectangleBorder(

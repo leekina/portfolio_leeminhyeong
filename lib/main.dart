@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:portfolio_leeminhyeong/common.dart';
-import 'package:portfolio_leeminhyeong/page/mobile/mobile_home.dart';
-
-import 'page/web/web_home.dart';
+import 'package:portfolio_leeminhyeong/page/home/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -22,9 +26,7 @@ class MyApp extends StatelessWidget {
         fontFamily: kMainFont,
       ),
       title: 'Flutter developer 이민형',
-      home: contextWidth(context) > kMobileWidth
-          ? const WebHome()
-          : const MobileHome(),
+      home: const HomePage(),
     );
   }
 

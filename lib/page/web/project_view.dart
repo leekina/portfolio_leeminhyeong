@@ -13,11 +13,11 @@ class ProjectView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: kFHDWidth,
-      padding: EdgeInsets.symmetric(vertical: 120),
+      padding: const EdgeInsets.symmetric(vertical: 120),
       child: Column(
         children: [
           TextCustom.type('Project', type: TextType.mainTitle),
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           SizedBox(
             width: contextWidth(context) < 1344
                 ? kMobileWidth
@@ -31,6 +31,7 @@ class ProjectView extends StatelessWidget {
               children: List.generate(
                 projectList.length,
                 (index) => ProjectCard(
+                  isMoblie: false,
                   index: index,
                 ),
               ),

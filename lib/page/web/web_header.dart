@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
 
-class Header extends StatelessWidget {
-  const Header({
+class WebHeader extends StatelessWidget {
+  const WebHeader({
     super.key,
   });
 
@@ -42,7 +42,7 @@ class Header extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextCustom(
+              const TextCustom(
                 '{',
                 color: Colors.white,
                 size: 70,
@@ -55,7 +55,7 @@ class Header extends StatelessWidget {
                 size: subTextSize,
               ),
               const SizedBox(width: 40),
-              TextCustom(
+              const TextCustom(
                 '}',
                 color: Colors.white,
                 size: 70,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SkillCard extends StatelessWidget {
-  SkillCard({
+  const SkillCard({
     super.key,
     required this.imageLink,
   });
 
-  String imageLink;
+  final String imageLink;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class SkillCard extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               offset: Offset(3, 3),
               blurRadius: 10,

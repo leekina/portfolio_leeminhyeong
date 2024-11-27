@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/model/project.model.dart';
 
 class ImageSliderComponent extends StatelessWidget {
-  final ProjectModel project;
+  final Project project;
   ImageSliderComponent({
     Key? key,
     required this.project,
@@ -15,18 +15,16 @@ class ImageSliderComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Stack(
+      alignment: Alignment.bottomCenter,
       children: [
-        Expanded(
-          child: imageSlider(context, project),
-        ),
+        imageSlider(context, project),
         imageIndicator(project),
       ],
     );
   }
 
-  CarouselSlider imageSlider(BuildContext context, ProjectModel project) {
+  CarouselSlider imageSlider(BuildContext context, Project project) {
     return CarouselSlider(
       items: project.imageList
           .map(
@@ -44,16 +42,15 @@ class ImageSliderComponent extends StatelessWidget {
                   ),
                 );
               },
-              child: Center(
-                child: Image.asset(
-                  image,
-                  fit: BoxFit.contain,
-                ),
+              child: Image.asset(
+                image,
+                fit: BoxFit.contain,
               ),
             ),
           )
           .toList(),
       options: CarouselOptions(
+          aspectRatio: 1.2,
           viewportFraction: 1.0,
           enlargeCenterPage: false,
           onPageChanged: (index, reason) {
@@ -62,7 +59,7 @@ class ImageSliderComponent extends StatelessWidget {
     );
   }
 
-  Widget imageIndicator(ProjectModel project) {
+  Widget imageIndicator(Project project) {
     return ValueListenableBuilder(
       valueListenable: _current,
       builder: (BuildContext context, value, Widget? child) {

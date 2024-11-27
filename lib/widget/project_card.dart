@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
+import 'package:portfolio_leeminhyeong/page/mobile/mobile_project_dialog.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
 import 'package:portfolio_leeminhyeong/page/web/project_dialog.dart';
 import 'package:portfolio_leeminhyeong/repository/project.dart';
 
 class ProjectCard extends StatelessWidget {
-  ProjectCard({
+  const ProjectCard({
     super.key,
     required this.index,
+    required this.isMoblie,
   });
 
-  int index;
+  final int index;
+  final bool isMoblie;
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +21,16 @@ class ProjectCard extends StatelessWidget {
       onTap: () {
         showDialog(
           context: context,
-          builder: (context) => ProjectDialog(selectedProject: index),
+          builder: (context) => isMoblie
+              ? MobileProjectDialog(selectedProject: index)
+              : ProjectDialog(selectedProject: index),
         );
       },
       child: Container(
         height: 500,
         width: 500,
         alignment: Alignment.center,
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: kMainColor, width: 1),

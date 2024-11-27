@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
+import 'package:portfolio_leeminhyeong/model/education.model.dart';
 import 'package:portfolio_leeminhyeong/repository/user.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
-
-import '../../repository/project.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({
@@ -14,15 +13,15 @@ class AboutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: kFHDWidth,
-      padding: EdgeInsets.symmetric(vertical: 120),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(vertical: 120),
+      decoration: const BoxDecoration(
         color: Color(0xffF9F9F9),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           TextCustom.type('About', type: TextType.mainTitle),
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -32,7 +31,7 @@ class AboutView extends StatelessWidget {
                     ? contextWidth(context) * 0.4
                     : 800,
               ),
-              SizedBox(width: 100),
+              const SizedBox(width: 100),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,8 +40,8 @@ class AboutView extends StatelessWidget {
                   (index) {
                     return Column(
                       children: [
-                        InfoDetail(index),
-                        SizedBox(height: 40),
+                        infoDetail(index),
+                        const SizedBox(height: 40),
                       ],
                     );
                   },
@@ -55,7 +54,7 @@ class AboutView extends StatelessWidget {
     );
   }
 
-  Column InfoDetail(int index) {
+  Column infoDetail(int index) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(

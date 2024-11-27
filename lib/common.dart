@@ -17,3 +17,12 @@ double contextWidth(BuildContext context) {
 double contextHeight(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }
+
+enum ProfileInfo {
+  name,
+  birth,
+  education,
+  contact,
+  career,
+  etc,
+}

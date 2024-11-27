@@ -6,7 +6,7 @@ import 'package:portfolio_leeminhyeong/widget/custom_divider.dart';
 import 'package:portfolio_leeminhyeong/page/web/footer.dart';
 
 import 'about_view.dart';
-import 'header.dart';
+import 'web_header.dart';
 import 'project_view.dart';
 import 'skill_view.dart';
 
@@ -15,18 +15,17 @@ class WebHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('view width ${MediaQuery.of(context).size.width}');
-    return Scaffold(
+    // log('view width ${MediaQuery.of(context).size.width}');
+    return const Scaffold(
       body: SingleChildScrollView(
-        controller: ScrollController(),
         child: Column(
           children: [
-            Header(),
-            const AboutView(),
-            const SkillView(),
-            const DividerCustom(),
-            const ProjectView(),
-            const Footer(),
+            WebHeader(),
+            AboutView(),
+            SkillView(),
+            DividerCustom(),
+            ProjectView(),
+            WebFooter(),
           ],
         ),
       ),

@@ -1,19 +1,15 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class ProjectModel {
-  String projcetName;
-  String projectInfo;
-  String? projectDate;
-  String projectPart;
-  List<String> imageList;
-  List<String> about;
+part 'project.model.freezed.dart';
 
-  ProjectModel({
-    required this.projcetName,
-    required this.projectInfo,
-    this.projectDate,
-    required this.projectPart,
-    required this.imageList,
-    required this.about,
-  });
+@freezed
+class Project with _$Project {
+  const factory Project({
+    required String projcetName,
+    required String projectInfo,
+    String? projectDate,
+    required String projectPart,
+    required List<String> imageList,
+    required List<String> about,
+  }) = _Project;
 }

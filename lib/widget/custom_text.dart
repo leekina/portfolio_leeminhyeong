@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../common.dart';
 
-enum TextType { mainTitle, subTitle, text }
+enum TextType {
+  mainTitle,
+  subTitle,
+  text,
+}
 
 class TextCustom extends StatelessWidget {
   final String text;
