@@ -20,6 +20,7 @@ class MobileProjectView extends StatelessWidget {
             (count / itemsPerRow).ceil() *
             (1 / ratio);
     return Container(
+      color: Colors.white,
       width: kFHDWidth,
       padding: const EdgeInsets.symmetric(vertical: 120, horizontal: 24),
       child: Column(
@@ -30,6 +31,7 @@ class MobileProjectView extends StatelessWidget {
             width: contextWidth(context),
             height: calcHeight,
             child: GridView.count(
+              physics: const NeverScrollableScrollPhysics(),
               childAspectRatio: ratio,
               crossAxisCount: itemsPerRow,
               mainAxisSpacing: 24,

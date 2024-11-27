@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
-import 'package:portfolio_leeminhyeong/model/education.model.dart';
 import 'package:portfolio_leeminhyeong/repository/user.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
 

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import 'package:portfolio_leeminhyeong/widget/custom_divider.dart';
