@@ -44,6 +44,7 @@ class SkillIcon extends StatelessWidget {
       width: contextWidth(context),
       height: calcHeight,
       child: GridView.count(
+          physics: const NeverScrollableScrollPhysics(),
           childAspectRatio: ratio,
           crossAxisCount: itemsPerRow,
           mainAxisSpacing: 24,

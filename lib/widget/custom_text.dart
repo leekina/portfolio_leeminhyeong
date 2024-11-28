@@ -46,14 +46,14 @@ class TextCustom extends StatelessWidget {
     );
   }
 
-  static Widget type(String text, {required TextType type}) {
+  static Widget type(String text, {required TextType type, bool? isMobile}) {
     //메인타이틀
     if (type == TextType.mainTitle) {
       return Text(
         text,
         style: TextStyle(
           fontFamily: kTitleFont,
-          fontSize: 50,
+          fontSize: isMobile == true ? 32 : 50,
           fontWeight: FontWeight.bold,
         ),
       );
@@ -64,7 +64,7 @@ class TextCustom extends StatelessWidget {
         text,
         style: TextStyle(
           fontFamily: kTitleFont,
-          fontSize: 30,
+          fontSize: isMobile == true ? 20 : 30,
           fontWeight: FontWeight.bold,
         ),
       );
@@ -73,7 +73,7 @@ class TextCustom extends StatelessWidget {
         text,
         style: TextStyle(
           fontFamily: kMainFont,
-          fontSize: 20,
+          fontSize: isMobile == true ? 16 : 20,
         ),
       );
     }

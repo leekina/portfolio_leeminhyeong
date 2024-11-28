@@ -22,10 +22,11 @@ class MobileProjectView extends StatelessWidget {
     return Container(
       color: Colors.white,
       width: kFHDWidth,
-      padding: const EdgeInsets.symmetric(vertical: 120, horizontal: 24),
+      padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 24),
       child: Column(
         children: [
-          TextCustom.type('Project', type: TextType.mainTitle),
+          const TextCustom('Project',
+              isTitle: true, size: 32, fontWeight: FontWeight.bold),
           const SizedBox(height: 30),
           SizedBox(
             width: contextWidth(context),

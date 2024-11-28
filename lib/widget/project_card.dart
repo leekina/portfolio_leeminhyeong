@@ -27,10 +27,8 @@ class ProjectCard extends StatelessWidget {
         );
       },
       child: Container(
-        height: 500,
-        width: 500,
         alignment: Alignment.center,
-        padding: const EdgeInsets.all(30),
+        padding: EdgeInsets.all(isMoblie ? 16 : 30),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: kMainColor, width: 1),
@@ -51,7 +49,7 @@ class ProjectCard extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: TextCustom(
                 projectList.elementAt(index).projcetName,
-                size: 24,
+                size: isMoblie ? 16 : 24,
                 fontWeight: FontWeight.bold,
               ),
             ),

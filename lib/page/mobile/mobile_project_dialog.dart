@@ -22,6 +22,7 @@ class _MobileProjectDialogState extends State<MobileProjectDialog> {
   Widget build(BuildContext context) {
     Project project = projectList.elementAt(widget.selectedProject);
     return Dialog(
+      insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
       surfaceTintColor: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30),
@@ -29,41 +30,43 @@ class _MobileProjectDialogState extends State<MobileProjectDialog> {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(color: Color(0xffF5F5F5)),
-                  child: ImageSliderComponent(project: project),
+          child: Column(
+            children: [
+              Container(
+                decoration: const BoxDecoration(color: Color(0xffF5F5F5)),
+                child: ImageSliderComponent(project: project),
+              ),
+              Container(
+                padding: EdgeInsets.all(kDefaultPadding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextCustom.type('Title.',
+                        type: TextType.subTitle, isMobile: true),
+                    TextCustom.type(project.projcetName,
+                        type: TextType.text, isMobile: true),
+                    TextCustom.type('Overview.',
+                        type: TextType.subTitle, isMobile: true),
+                    TextCustom.type('- ${project.projectInfo}',
+                        type: TextType.text, isMobile: true),
+                    TextCustom.type('- ${project.projectPart}',
+                        type: TextType.text, isMobile: true),
+                    TextCustom.type('About.',
+                        type: TextType.subTitle, isMobile: true),
+                    ...List.generate(
+                      project.about.length,
+                      (index) {
+                        return TextCustom.type(
+                            '- ${project.about.elementAt(index)}',
+                            type: TextType.text,
+                            isMobile: true);
+                      },
+                    ),
+                  ],
                 ),
-                Container(
-                  padding: EdgeInsets.all(kDefaultPadding),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      TextCustom.type('Title.', type: TextType.subTitle),
-                      TextCustom.type(project.projcetName, type: TextType.text),
-                      TextCustom.type('Overview.', type: TextType.subTitle),
-                      TextCustom.type('- ${project.projectInfo}',
-                          type: TextType.text),
-                      TextCustom.type('- ${project.projectPart}',
-                          type: TextType.text),
-                      TextCustom.type('About.', type: TextType.subTitle),
-                      ...List.generate(
-                        project.about.length,
-                        (index) {
-                          return TextCustom.type(
-                              '- ${project.about.elementAt(index)}',
-                              type: TextType.text);
-                        },
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
