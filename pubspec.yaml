@@ -68,6 +68,7 @@ flutter:
     - assets/images/projects/wecancrm/
     - assets/images/projects/wecanedu/
     - assets/images/projects/salpick/
+    - assets/images/projects/eobuba/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
