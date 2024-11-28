@@ -14,10 +14,10 @@ class MobileHome extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final scrollController = ref.watch(myScrollControllerProvider);
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: CustomScrollView(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: CustomScrollView(
           controller: scrollController,
           slivers: const [
             SliverToBoxAdapter(child: MobileHeader()),
