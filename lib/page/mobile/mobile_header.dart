@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:portfolio_leeminhyeong/common.dart';
 import 'package:portfolio_leeminhyeong/widget/custom_text.dart';
 
-class MobileHeader extends StatelessWidget {
+class MobileHeader extends HookConsumerWidget {
   const MobileHeader({
     super.key,
   });
@@ -11,7 +12,7 @@ class MobileHeader extends StatelessWidget {
   final double headerTextSize = 40;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       height: 300,
       decoration: BoxDecoration(color: kMainColor),

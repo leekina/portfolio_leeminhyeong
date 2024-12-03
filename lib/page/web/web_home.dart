@@ -13,7 +13,6 @@ class WebHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // log('view width ${MediaQuery.of(context).size.width}');
     return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
