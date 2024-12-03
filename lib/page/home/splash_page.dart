@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:lottie/lottie.dart';
+import 'package:portfolio_leeminhyeong/common.dart';
 
 class SplashPage extends HookConsumerWidget {
   const SplashPage({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
         child: SizedBox(
-          height: 300,
-          width: 300,
+          height: size.width < kMobileWidth ? 200 : 300,
+          width: size.width < kMobileWidth ? 200 : 300,
           child: Lottie.asset(
             frameRate: const FrameRate(60),
             'assets/images/loading.json',
